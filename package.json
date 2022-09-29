@@ -4,6 +4,7 @@
   "description": "simple task manager",
   "main": "app.js",
   "scripts": {
+    "start":"node app.js",
     "test": "./node_modules/mocha/bin/mocha --delay",
     "gulp": "./node_modules/.bin/gulp"
   },
