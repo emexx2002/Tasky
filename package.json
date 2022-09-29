@@ -4,6 +4,7 @@
   "description": "simple task manager",
   "main": "app.js",
   "scripts": {
+    "start":"nodemon app.js",
     "test": "./node_modules/mocha/bin/mocha --delay",
     "gulp": "./node_modules/.bin/gulp"
   },
@@ -19,11 +20,13 @@
   "homepage": "https://github.com/hasanmansur/Tasky#readme",
   "dependencies": {
     "async": "^1.5.2",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
     "jsonwebtoken": "^7.0.0",
+    "mongodb": "^3.0.0",
     "mongoosastic": "^4.0.2",
-    "mongoose": "^4.4.17",
+    "mongoose": "^5.7.0",
     "mongoose-nested-set": "0.0.7"
   },
   "devDependencies": {

@@ -11,9 +11,11 @@ function findAll (req, res, next) {
     })
     .exec(function (err, users) {
         if (err) {
+           
             return next(err);
         }
         res.send(users);   
+        
     }); 
 }
 
@@ -36,6 +38,7 @@ function findById (req, res, next) {
 function add (req, res, next) {
     usersModel.create(req.body, function (err, user) {
         if (err) {
+            console.log(err)
             next(err);
         }
         res.send(user);

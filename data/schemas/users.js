@@ -9,8 +9,12 @@ var emailRegexp = /.+\@.+\..+/;
 var usersSchema = new Schema({
 	username: { type: String, required: true, unique:true },
 	password: { type: String, required: true },
-	role: { type: Schema.Types.ObjectId, ref: 'role', required: true, es_schema: rolesSchema },
-	email: { type:String, required: true, match: emailRegexp }
+	role: {
+        type: String,
+        ref: "Role"
+      },
+	email: { type:String, required: true, match: emailRegexp },
+  teams: {type: Array}
 });
 
 usersSchema.plugin(mongoosastic, {

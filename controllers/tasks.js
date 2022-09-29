@@ -47,6 +47,13 @@ function findById (req, res, next) {
 }
 
 function add (req, res, next) {
+    const body = {
+        name:req.body.name,
+        status:req.body.status,
+        teamMembers:req.body.team,
+
+
+    }
     tasksModel.create(req.body, function (err, task) {
         if (err) {
             next(err);

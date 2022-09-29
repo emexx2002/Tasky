@@ -11,7 +11,7 @@ module.exports = function (app) {
     });
     
     //route middlewares
-    app.use("/authenticate", auth);
+    app.use("/auth", auth);
     app.use("/roles", roles);
     app.use("/users", users);
     app.use("/tasks", tasks);
