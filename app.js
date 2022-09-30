@@ -36,7 +36,7 @@ db.once('open', function() {
 //app.set('topsecret', config.secret);
 
 //listen
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
 	console.log("REST server listening on port 3000");
 });
 
