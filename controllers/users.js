@@ -1,22 +1,16 @@
 var usersModel = require("../data/models/users");
 var rolesModel = require('../data/models/roles');
 
-function findAll (req, res, next) {
-    usersModel.find({})
-    .populate({
-        path: 'role',
-        populate: {
-            path: 'parentId'
-        }
-    })
-    .exec(function (err, users) {
-        if (err) {
-           
-            return next(err);
-        }
-        res.send(users);   
-        
-    }); 
+const findAll = async (req, res, next) => {
+    const users = await usersModel.find()
+    // .populate({
+    //     path: 'role',
+    //     populate: {
+    //         path: 'parentId'
+    //     }
+    // })
+    res.send(users)
+   
 }
 
 function findById (req, res, next) {

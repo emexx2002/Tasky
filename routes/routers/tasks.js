@@ -2,7 +2,7 @@ var router = require("express").Router();
 var tasksCtrl = require("../../controllers/tasks");
 var loadUser = require("../middlewares/loadUser");
 
-router.use(loadUser);
+// router.use(loadUser);
 
 router.route("/")
     .get (tasksCtrl.findAll)
