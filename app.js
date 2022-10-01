@@ -2,11 +2,13 @@ var express = require("express");
 var routes = require("./routes");
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var cors = require('cors')
 var config = require('./config');
 const Role = require("./data/models/roles")
 
 //application 
 var app = express();
+app.use(cors())
 
 //JSON parser middleware
 app.use(bodyParser.json());

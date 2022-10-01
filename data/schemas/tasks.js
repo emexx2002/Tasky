@@ -7,9 +7,9 @@ var teamsSchema = require("./teams")
 
 var tasksSchema = new Schema({
 	name: { type: String, required: true },
+	project: {type:Schema.Types.ObjectId, required: true},
 	status: { type: String, required: true, 'enum': ['To Do', 'In Progress', 'Done'] },
 	createdBy: { type: Schema.Types.ObjectId, ref: 'user', required: true, es_schema: usersSchema },
-	teamMembers: {type: Schema.Types.ObjectId, ref: 'team', required: true, es_schema:teamsSchema},
 	assignedTo: { type: Schema.Types.ObjectId, ref: 'user', required: true, es_schema: usersSchema }
 });
 

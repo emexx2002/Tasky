@@ -4,7 +4,7 @@
   "description": "simple task manager",
   "main": "app.js",
   "scripts": {
-    "start":"node app.js",
+    "start": "node app.js",
     "test": "./node_modules/mocha/bin/mocha --delay",
     "gulp": "./node_modules/.bin/gulp"
   },
@@ -22,6 +22,7 @@
     "async": "^1.5.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.15.1",
+    "cors": "^2.8.5",
     "express": "^4.13.4",
     "jsonwebtoken": "^7.0.0",
     "mongodb": "^3.0.0",

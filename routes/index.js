@@ -11,11 +11,11 @@ module.exports = function (app) {
     });
     
     //route middlewares
-    app.use("/auth", auth);
-    app.use("/roles", roles);
-    app.use("/users", users);
-    app.use("/tasks", tasks);
-    app.use("/search", search);
+    app.use("/api/v1/auth", auth);
+    app.use("/api/v1/roles", roles);
+    app.use("/api/v1/users", users);
+    app.use("/api/v1/tasks", tasks);
+    app.use("/api/v1/search", search);
     
     /*app.get("*", function (req, res) {
         res.send("no route matched");
